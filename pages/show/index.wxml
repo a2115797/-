@@ -1,0 +1,6 @@
+<navbar parameter='{{parameter}}' ></navbar>
+
+<view class="component">
+  <turntable wx:if="{{show == 'turntable'}}"/>
+  <calendar wx:if="{{show == 'calendar'}}" marks="{{ [{date: '2020-12-02'}, {date: '2020-12-03'}] }}"/>
+</view>

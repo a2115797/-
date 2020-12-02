@@ -1,0 +1,7 @@
+<navbar parameter='{{parameter}}' logoUrl="{{logoUrl}}"></navbar>
+<view class="title">小程序常用组件</view>
+
+<view class="nav">
+  <navigator class="item" url="/pages/show/index?name=turntable">抽奖转盘</navigator>
+  <navigator class="item" url="/pages/show/index?name=calendar">签到日历</navigator>
+</view>

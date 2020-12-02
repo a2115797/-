@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 60rpx;
+}
+.nav {
+  margin-top: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav .item {
+  width: 230rpx;
+  height: 230rpx;
+  line-height: 250rpx;
+  border: 1rpx solid #ddd;
+  text-align: center;
+  font-size: 30rpx;
+  color: #565656;
+}

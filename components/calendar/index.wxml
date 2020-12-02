@@ -1,0 +1,27 @@
+<view class="pl-calendar">
+    <view class="calendar-header">
+      <view class="header-left">
+        <button class="btn btn-prev" type="default" size="mini" bindtap="prevMon"></button>
+      </view>
+      <view class="title">{{yearAndMonth}}</view>
+      <view class="header-right">
+        <button class="btn btn-next" type="default" size="mini" bindtap="nextMon"></button>
+      </view>
+		</view>
+    <view class="calendar-body">
+      <view class="table-row week-label-box">
+        <view class="table-col" wx:for="{{weekLabel}}" wx:for-index="w" wx:for-item="label" wx:key="w">{{label}}</view>
+      </view>
+    	<view class="table-row" wx:for="{{calendar}}" wx:for-index="k" wx:for-item="row" wx:key="k">
+        <view class="table-col" wx:for="{{row}}" wx:for-index="i" wx:for-item="col" wx:key="i">
+          <view 
+            class="day {{col.beforeToday ? 'before-today' : ''}} {{col.isToday ? 'is-today':''}} {{col.isWeekend ? 'is-weekend':''}} {{col.mark ? 'mark':''}}" 
+            data-date="{{col.date || ' '}}"
+            bindtap="tapDay"
+          >
+          	{{col.day || ''}}
+          </view>
+        </view>
+      </view>
+    </view>
+	</view>
