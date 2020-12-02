@@ -1,3 +1,4 @@
+import { getLogo } from '../../api/api.js';
 
 let app = getApp();
 
@@ -100,11 +101,12 @@ Component({
               continue;
             }
             let day = k < 10 ? '0'+k : k;
-            let date = this.data.year + '-' + this.data.month + '-' + day;
+            let month = this.data.month < 10 ? '0'+this.data.month : this.data.month;
+            let date = this.data.year + '-' + month + '-' + day;
             let mark = this.data.marks.find(function(mark){return mark[that.data.map.date] == date}) || null;
             
             tableRow.push({
-              date: this.data.year + '-' + this.data.month + '-' + day,
+              date: date,
               year: this.data.year,
               month: this.data.month,
               day: k,
