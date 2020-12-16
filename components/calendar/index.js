@@ -1,5 +1,3 @@
-import { getLogo } from '../../api/api.js';
-
 let app = getApp();
 
 Component({
@@ -122,7 +120,6 @@ Component({
         calendar.push(tableRow);
       }
       this.setData({ calendar: calendar});
-      console.log(this.data.calendar)
     },
   }
 })
